@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        .form{
+            border:1px solid black;
+            border-radius: 5px;
+            background-color: #c6f2fe;
+            background-image:linear-gradient(skyblue,rgb(208, 253, 255),skyblue);
+            padding: 20px; 
+            
+        }
+        h1{
+            text-align: center;
+        }
+       
+        input,select{
+            width:250px;
+            padding:12px;
+            border:1px solid #ccc;
+            border-radius:4px;
+            resize: vertical;
+        }
+        #myfile{
+            background-color:white;
+        }
+        input[type=radio]{
+            margin-left:120px;
+            align-items: center;
+            text-align: left;
+        
+            
+        }
+        input[type=checkbox]{
+            margin-left:120px;
+            align-items: center;
+            text-align: left;
+        
+        }
+        #caste{
+            width:275px;
+        }
+        label{
+              padding:12px 0 12px 0 ;
+              display: inline-block;
+              text-align: left;
+             
+              
+              
+              
+        }
+        .col-21 {
+            float:left;
+            width: 15%;
+        margin-top: 6px;
+        }
+        .col-71{
+            float:left;
+            width:15%;
+         margin-top:6px;  
+        }
+        button{
+            padding:10px;
+            background-color:rgb(20, 4, 103);
+            border:1px solid rgb(4, 2, 100);
+            text-align: center;
+            width:100px;
+            border-radius:8px;
+            color:white;
+            font-size:20px;
+        
+
+        }
+        button:hover{
+            cursor: pointer;
+            border:3px solid whitesmoke;
+        }
+        .button +.button{
+         margin-left:25px;
+        }
+        img{
+            text-align: center;
+            margin-left:80px;
+        }
+        p{
+            font-size:16px;
+        }
+    
+        
+        .form1::after{
+            content:"";
+            display:table;
+            clear: both;
+        }
+        @media screen and (max-width: 600px) {
+  .col-21, .col-71, input{
+    width: 100%;
+    margin-top: 0;
+  }
+}  
+       
+    </style>
+   
+</head>
+<body>
+    <div class="form">
+   <img src="./state.jpeg" height="100px" width="300px">
+    <form action="">
+        <div class="form1">
+        <div class="col-21">
+        <label for="fname">First Name:</label></div>
+        <div class="col-71">
+        <input type="text" id="fname" name="fname">
+        </div></div>
+        <div class="form1">
+            <div class="col-21">
+        <label for="lname">Last Name:</label></div>
+        <div class="col-71">
+        <input type="text" id="lname" name="lname"></div></div>
+        <div class="form1">
+            <div class="col-21">
+        <label for="fname">Father Name:</label></div>
+        <div class="col-71">
+        <input type="text" id="fname" name="fname"></div></div>
+        <div class="form1">
+            <div class="col-21">
+        <label for="mname">Mother Name:</label></div>
+        <div class="col-71">
+        <input type="text" id="mname" name="mname"></div></div>
+        <div class="form1">
+            <div class="col-21">
+        <label for="brith date">Date of Birth:</label></div>
+        <div class="col-71">
+        <input type="date" id="Birth date" name="birth date"></div></div>
+        <div class="form1">
+            <div class="col-21">
+        <label for="Email">Email:</label></div>
+        <div class="col-71">
+        <input type="email" id="email" name="email"></div></div>
+        <div class="form1">
+            <div class="col-21">
+        <label for="mobile">Mobile Number:</label></div>
+        <div class="col-71">
+        <input type="tel" id="Mobile" name="mobile" pattern="\d{10}" required>
+        </div></div>
+        <p>Choose your Gender:</p>
+        <label class="female">
+        <input type="radio" id="gender" name="gender" value="female">
+        Female</label><br><br>
+        <label class="male">
+        <input type="radio" id="gender" name="gender" value="male">
+        Male</label>
+        <div class="form1">
+            <div class="col-21">
+        <label for="aadhar">Aadhar Number:</label></div>
+        <div class="col-71">
+        <input type="text"id="aadhar" name="aadhar" pattern="\d{12}" required></div></div>
+        <div class="form1">
+            <div class="col-21">
+        <label for="caste">Choose a caste:</label></div>
+        <div class="col-71">
+        <select id="caste" name="caste"required>
+          <option value="--select--">--select--</option>/>
+            <option value="BC">BC</option>
+            <option value="SC">SC</option>
+            <option value="OC">OC</option>
+            <option value="ST">ST</option>
+        </select></div></div>
+        <div class="form1">
+            <div class="col-21">
+        <label for="username">UserName:</label></div>
+        <div class="col-71">
+        <input type="text" id="name" name="name"></div></div>
+        <div class="form1">
+            <div class="col-21">
+        <label for="password">Password:</label></div>
+        <div class="col-71">
+        <input type="password" id="password" name="password"></div></div>
+        <div class="form1">
+            <div class="col-21">
+        <label for="Re-password">Re-Password:</label></div>
+        <div class="col-71">
+        <input type="password" id="password" name="password"></div></div>
+       <p>Upload your Image</p>
+       <div class="form1">
+        <div class="col-21">
+       <label for="myfile">Select a file:</label></div>
+       <div class="col-71">
+       <input type="file" id="myfile" name="myfile"></div></div>
+       <p>Could you clarify or provide more details? That way,I can give you the right information!</p>
+       <input type="checkbox" id="iagree" name="iagree">
+       <label for="iagree">I Agree</label><br><br>
+    <button class="button">save</button>
+    <button class="button">sumbit</button>
+    </form>
+    </div>
+    
+</body>
+</html>
